@@ -1,9 +1,10 @@
 import "./App.css";
+import Grid from "./components/GridArea/Grid";
 
 function App() {
   return (
     <div className="App">
-      <h1 className="text-xl font-bold underline">Hello world!</h1>
+      <Grid />
     </div>
   );
 }
