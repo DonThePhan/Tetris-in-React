@@ -1,12 +1,9 @@
-import "./App.css";
-import Grid from "./components/GridArea/Grid";
-import GameController from "./components/GameController";
+import Tetris from "./components/Tetris";
 
 function App() {
   return (
-    <div className="App flex flex-col items-center">
-      <Grid />
-      <GameController />
+    <div className="App">
+      <Tetris />
     </div>
   );
 }
