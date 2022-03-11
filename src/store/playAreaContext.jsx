@@ -6,8 +6,6 @@ const PlayAreaContext = React.createContext({});
 export const PlayAreaProvider = (props) => {
   const [grid, setGrid] = useState(gridData);
   
-  /** test line */
-
   function startGame() {
     console.log('here')
     moveDown();
