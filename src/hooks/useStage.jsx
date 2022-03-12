@@ -27,7 +27,7 @@ export function useStage(player, resetPlayer) {
     };
 
     setStage((prev) => updateStage(prev));
-  }, [player.collided, player.pos.x, player.pos.y, player.tetromino]);
+  }, [player]);
 
   return { stage, setStage };
 }

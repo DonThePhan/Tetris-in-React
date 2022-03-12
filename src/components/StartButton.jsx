@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-function StartButton({callback}) {
-  return (
-    <div>Start Game</div>
-  )
+function StartButton({ callback }) {
+  return <button onClick={callback}>Start Game</button>;
 }
 
-export default StartButton
+export default StartButton;

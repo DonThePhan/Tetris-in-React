@@ -18,17 +18,18 @@ function Tetris() {
 
   const { player, updatePlayerPos, resetPlayer } = usePlayer();
   const { stage, setStage } = useStage(player);
+  console.log(player.pos)
 
   console.log("re-render");
 
   const movePlayer = (dir) => {
-    updatePlayerPos({x:dir, y:0})
+    updatePlayerPos({ x: dir, y: 0 });
   };
 
   const startGame = () => {
     // Reset Everthing
-    setStage(createStage())
-    resetPlayer()
+    setStage(createStage());
+    resetPlayer();
   };
 
   const drop = () => {
@@ -52,7 +53,7 @@ function Tetris() {
   };
 
   return (
-    <StyledTetrisWrapper role="button" tabIndex="0" onKeyDown={(e) => move(e)}>
+    <div tabIndex="0" onKeyDown={(e) => move(e)} className="w-screen h-screen">
       <div className="flex flex-row items-start">
         <Stage stage={stage} />
         <aside>
@@ -65,10 +66,10 @@ function Tetris() {
               <Display text="Level" />
             </div>
           )}
-          <StartButton onClick={startGame} />
+          <StartButton callback={startGame} />
         </aside>
       </div>
-    </StyledTetrisWrapper>
+    </div>
   );
 }
 
